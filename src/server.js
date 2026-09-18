@@ -19,7 +19,7 @@ app.get("/",(req,res)=>{
 })
 
 
-app.get("/produtos",(req,res)=>{
+app.get("/produtos", async (req,res)=>{
     try {
         const [produtos] = await db.query(
             "SELECT * from produtos"
